@@ -3,7 +3,7 @@
   sqlite,
   xz,
   stdenv,
-  fetchFromGitHub
+  fetchFromGitHub,
 }:
 stdenv.mkDerivation rec {
   pname = "integration_demo";

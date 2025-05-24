@@ -5,7 +5,7 @@
   stdenv,
   cmake,
   pkg-config,
-  fetchFromGitHub
+  fetchFromGitHub,
 }:
 stdenv.mkDerivation rec {
   pname = "integration_demo";
@@ -25,7 +25,10 @@ stdenv.mkDerivation rec {
     xz
   ];
 
-  nativeBuildInputs = [ cmake pkg-config ];
+  nativeBuildInputs = [
+    cmake
+    pkg-config
+  ];
   meta.main_program = pname;
 
 }

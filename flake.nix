@@ -17,7 +17,7 @@
         packages.default = pkgs.callPackage ./packages/package_cmake.nix {};
         packages.complex = pkgs.pkgsStatic.callPackage ./package_manual.nix {};
         packages.static = pkgs.pkgsStatic.callPackage ./package_manual.nix {};
-
+        packages.docker_image = pkgs.callPackage ./packages/package_docker.nix {techforum_app = packages.default;};
         packages.sunshine = pkgs.callPackage ./packages/package_sunshine.nix {};
 
 
@@ -33,63 +33,9 @@
         packages.static_rpm = bundlers.toRPM packages.static;
         packages.deb = bundlers.toDEB packages.default;
         packages.static_deb = bundlers.toDEB packages.static;
-
         packages.sbom = bombon.lib.${system}.buildBom packages.default {};
 
-        devShells.default = pkgs.mkShell {
-          buildInputs = with pkgs; [
-            boost
-            sqlite
-            xz
-            gcc
-            gnumake
-            jq
-          ];
-          
-          shellHook = let 
-            sbom_file = packages.sbom;
-          in ''
-            echo "C++ Integration Demo Development Environment"
-            echo "Dependencies: Boost, SQLite, and XZ"
-            echo "link attrs: -lboost_system -lsqlite3 -llzma -lstdc++fs"
-            echo "Build command: $CXX -std=c++17 src/main.cpp -o integration_demo -lboost_system -lsqlite3 -llzma"
-            echo "Run command: ./integration_demo"
-
-            function sbom_lic() {
-              jq -r '[.metadata.component.purl, (.components[] | .purl + "\n" + (.licenses[0].license.id // "NO LICENSE FOUND"))] | join("\n")' ${sbom_file}
-            }
-
-            function sbom_deps(){
-              jq -r '[.metadata.component.purl, (.components[] | .purl)] | join("\n")' ${sbom_file}
-            }
-
-            function build()
-            {
-              $CXX -std=c++17 src/main.cpp \
-                -o integration_demo \
-                -lboost_system \
-                -lsqlite3 \
-                -llzma \
-                -lstdc++fs
-            }
-
-            function run()
-            {
-              ./integration_demo
-            }
-
-            function clean()
-            {
-              rm -f integration_demo
-            }
-
-            function sbom()
-            {
-              cat ${sbom_file} | jq 
-            }
-
-          '';
-        };
+        devShells.default = import ./shell/shell.nix { inherit pkgs; };
       }
     );
 }

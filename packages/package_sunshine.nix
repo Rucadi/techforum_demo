@@ -1,8 +1,15 @@
-{ lib, stdenv, fetchFromGitHub, gnused, python3, python3Packages }:
+{
+  lib,
+  stdenv,
+  fetchFromGitHub,
+  gnused,
+  python3,
+  python3Packages,
+}:
 
 python3Packages.buildPythonApplication rec {
   pname = "sunshine";
-  version = "add307a9cdca3b32a126a9da0c872f31edf0b7ff"; 
+  version = "add307a9cdca3b32a126a9da0c872f31edf0b7ff";
 
   src = fetchFromGitHub {
     owner = "CycloneDX";
