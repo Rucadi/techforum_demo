@@ -1,0 +1,91 @@
+{
+  "name": "asldlmf0m1vrksyk1dkranl2sx76z3cq-cpp-integration-demo",
+  "path": "/nix/store/asldlmf0m1vrksyk1dkranl2sx76z3cq-cpp-integration-demo",
+  "size": 87384,
+  "children": [
+    {
+      "name": "p9kdj55g5l39nbrxpjyz5wc1m0s7rzsx-glibc-2.40-66",
+      "path": "/nix/store/p9kdj55g5l39nbrxpjyz5wc1m0s7rzsx-glibc-2.40-66",
+      "size": 30220560,
+      "children": [
+        {
+          "name": "c47b963idja6h1d8n91pf28v2jcq96kp-libidn2-2.3.7",
+          "path": "/nix/store/c47b963idja6h1d8n91pf28v2jcq96kp-libidn2-2.3.7",
+          "size": 361096,
+          "children": [
+            {
+              "name": "2745pvn6cv32yn9gp2rlqiqhqgs01pb5-libunistring-1.2",
+              "path": "/nix/store/2745pvn6cv32yn9gp2rlqiqhqgs01pb5-libunistring-1.2",
+              "size": 1856616,
+              "children": [
+              ]
+            }          ]
+        },
+        {
+          "name": "y4d9iir0yqmrcswaqfi368d8m1rkv14s-xgcc-13.3.0-libgcc",
+          "path": "/nix/store/y4d9iir0yqmrcswaqfi368d8m1rkv14s-xgcc-13.3.0-libgcc",
+          "size": 159624,
+          "children": []
+        }      ]
+    },
+    {
+      "name": "1qmvz7kcld8kzyrphmwzwk0a3ylxhwja-xz-5.6.3",
+      "path": "/nix/store/1qmvz7kcld8kzyrphmwzwk0a3ylxhwja-xz-5.6.3",
+      "size": 850632,
+      "children": [
+      ]
+    },
+    {
+      "name": "k7729yvcj89ngx04hlk6p8imibss3id6-sqlite-3.46.1",
+      "path": "/nix/store/k7729yvcj89ngx04hlk6p8imibss3id6-sqlite-3.46.1",
+      "size": 1585600,
+      "children": [
+        {
+          "name": "d8qd8zi576431b4zq6629p71g8vi1588-zlib-1.3.1",
+          "path": "/nix/store/d8qd8zi576431b4zq6629p71g8vi1588-zlib-1.3.1",
+          "size": 128168,
+          "children": [
+          ]
+        }      ]
+    },
+    {
+      "name": "w47x7y9xjgq7n3171ckg722ddwf2pi3v-gcc-13.3.0-lib",
+      "path": "/nix/store/w47x7y9xjgq7n3171ckg722ddwf2pi3v-gcc-13.3.0-lib",
+      "size": 9094744,
+      "children": [
+        {
+          "name": "bdsrlavadkx74k9ps4add4g67y569y1r-gcc-13.3.0-libgcc",
+          "path": "/nix/store/bdsrlavadkx74k9ps4add4g67y569y1r-gcc-13.3.0-libgcc",
+          "size": 159624,
+          "children": []
+        }      ]
+    },
+    {
+      "name": "zciwmb16hrig4h0y9wvcbi8cnn0nd4ls-boost-1.81.0",
+      "path": "/nix/store/zciwmb16hrig4h0y9wvcbi8cnn0nd4ls-boost-1.81.0",
+      "size": 14799608,
+      "children": [
+        {
+          "name": "70vbmfnr51wqw7bdkf793hnjv8fnwxxb-icu4c-74.2",
+          "path": "/nix/store/70vbmfnr51wqw7bdkf793hnjv8fnwxxb-icu4c-74.2",
+          "size": 38430360,
+          "children": [
+          ]
+        },
+        {
+          "name": "ckvfa841blp08qd9qd4bmsagfnzc7ial-bzip2-1.0.8",
+          "path": "/nix/store/ckvfa841blp08qd9qd4bmsagfnzc7ial-bzip2-1.0.8",
+          "size": 80760,
+          "children": [
+          ]
+        },
+        {
+          "name": "y8f0y8lavw4zh4g6k36pjkny3flj9ybn-zstd-1.5.6",
+          "path": "/nix/store/y8f0y8lavw4zh4g6k36pjkny3flj9ybn-zstd-1.5.6",
+          "size": 1185744,
+          "children": [
+          ]
+        }      ]
+    }
+  ]
+}
