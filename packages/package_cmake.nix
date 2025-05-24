@@ -3,6 +3,8 @@
   sqlite,
   xz,
   stdenv,
+  cmake,
+  pkg-config,
   fetchFromGitHub
 }:
 stdenv.mkDerivation rec {
@@ -13,8 +15,8 @@ stdenv.mkDerivation rec {
   src = fetchFromGitHub {
     owner = "rucadi";
     repo = "techforum_app";
-    rev = "301bbdf89e258f65123c530adabaf56e5e7d30f3";
-    sha256 = "sha256-J4rGxMcVDPg8LZ4dvdNGOPB1Orn+TT3bVoWi0AuuWK4=";
+    rev = "f46b93f591c05109455eac57e34ae9905723524b";
+    sha256 = "sha256-AtrvV7E/od9753evcriq2/GUrG0hSewu0BQ5PzH7ZYg=";
   };
 
   buildInputs = [
@@ -22,6 +24,8 @@ stdenv.mkDerivation rec {
     sqlite
     xz
   ];
+
+  nativeBuildInputs = [ cmake pkg-config ];
   meta.main_program = pname;
 
 }

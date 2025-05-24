@@ -10,15 +10,15 @@
         "systems": "systems"
       },
       "locked": {
-        "lastModified": 1742213187,
-        "narHash": "sha256-EiV+QA0RZqzt+lrYdsao7p1LhHB+fICjT4do4L+lIdM=",
-        "owner": "nikstur",
+        "lastModified": 1748098220,
+        "narHash": "sha256-WcagWWNvLkQAnH8Xn5JRM9kgX78KoCROBSyTQlPLOSc=",
+        "owner": "rucadi",
         "repo": "bombon",
-        "rev": "2c7df3b0877337b9ce4825ffbaa6e5148b96acb4",
+        "rev": "e602fcc4977322725f55c77da3a2fb3fbf1a209d",
         "type": "github"
       },
       "original": {
-        "owner": "nikstur",
+        "owner": "rucadi",
         "repo": "bombon",
         "type": "github"
       }
@@ -225,11 +225,11 @@
     },
     "nixpkgs_3": {
       "locked": {
-        "lastModified": 1747676747,
-        "narHash": "sha256-LXkWBVqilgx7Pohwqu/ABxDVw+Cmi5/Mj2S2mpUH0Fw=",
+        "lastModified": 1747862697,
+        "narHash": "sha256-U4HaNZ1W26cbOVm0Eb5OdGSnfQVWQKbLSPrSSa78KC0=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "72841a4a8761d1aed92ef6169a636872c986c76d",
+        "rev": "2baa12ff69913392faf0ace833bc54bba297ea95",
         "type": "github"
       },
       "original": {

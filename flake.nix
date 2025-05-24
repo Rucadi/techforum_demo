@@ -5,18 +5,22 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.11";
     flake-utils.url = "github:numtide/flake-utils";
     nixbundlers.url = "github:NixOS/bundlers";
-    bombon.url = "github:nikstur/bombon";
+    bombon.url = "github:rucadi/bombon";
     bombon.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = { self, nixpkgs, nixbundlers, bombon, flake-utils }:
+  outputs = { self, nixpkgs,  nixbundlers, bombon, flake-utils }:
     flake-utils.lib.eachDefaultSystem (system:
       let
         pkgs = nixpkgs.legacyPackages.${system};
       in rec{
-        packages.default = pkgs.callPackage ./package.nix {};
-        packages.complex = pkgs.pkgsStatic.callPackage ./package_complex.nix {};
-        packages.static = pkgs.pkgsStatic.callPackage ./package.nix {};
+        packages.default = pkgs.callPackage ./packages/package_cmake.nix {};
+        packages.complex = pkgs.pkgsStatic.callPackage ./package_manual.nix {};
+        packages.static = pkgs.pkgsStatic.callPackage ./package_manual.nix {};
+
+        packages.sunshine = pkgs.callPackage ./packages/package_sunshine.nix {};
+
+
         bundlers = {
           # Use the official toRPM bundler
           toRPM = nixbundlers.bundlers.${system}.toRPM;
