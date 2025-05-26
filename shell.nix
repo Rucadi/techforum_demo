@@ -19,10 +19,14 @@ stdenv_nixpkgs.mkShell {
     clang_nixpkgs.llvmPackages_15.clang
   ];
   shellHook = ''
+    # Python3 old versions are "special" :)
+    export LC_ALL=C
     # show all programs versions
     echo "git version: $(git --version)"
     echo "python3 version: $(python3 --version)"
     echo "nodejs version: $(node --version)"
     echo "clang version: $(clang --version)"
   '';
+  LOCALE_ARCHIVE = "${stdenv_nixpkgs.glibcLocales}/lib/locale/locale-archive";
+
 }
