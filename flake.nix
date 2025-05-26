@@ -15,9 +15,10 @@
         pkgs = nixpkgs.legacyPackages.${system};
       in rec{
         packages.default = pkgs.callPackage ./packages/package_cmake.nix {};
-        packages.complex = pkgs.pkgsStatic.callPackage ./package_manual.nix {};
-        packages.static = pkgs.pkgsStatic.callPackage ./package_manual.nix {};
+        packages.complex = pkgs.pkgsStatic.callPackage ./packages/package_manual.nix {};
+        packages.static = pkgs.pkgsStatic.callPackage ./packages/package_manual.nix {};
         packages.docker_image = pkgs.callPackage ./packages/package_docker.nix {techforum_app = packages.default;};
+        packages.docker_image_static = pkgs.callPackage ./packages/package_docker.nix {techforum_app = packages.static;};
         packages.sunshine = pkgs.callPackage ./packages/package_sunshine.nix {};
 
 
